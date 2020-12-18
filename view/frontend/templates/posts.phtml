@@ -1,0 +1,10 @@
+<?php
+/**
+ * @var \Inchoo\DeclarativeSchema\Block\Posts $block
+ */
+?>
+
+<?php foreach ($block->getNews() as $news): ?>
+    <h1><?= $news->getTitle() . ' ' . $news->getId(); ?></h1>
+<?php endforeach; ?>
+

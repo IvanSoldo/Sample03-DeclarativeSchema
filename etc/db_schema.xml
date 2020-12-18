@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="inchoo_posts" resource="default" engine="innodb" comment="Declarative Schema" charset="utf8">
+       <column name="post_id" xsi:type="int" padding="11" unsigned="true" identity="true" comment="post id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="post_id"/>
+        </constraint>
+        <column name="created_at" xsi:type="datetime" default="CURRENT_TIMESTAMP"/>
+        <column name="updated_at" xsi:type="datetime" default="CURRENT_TIMESTAMP" on_update="true"/>
+    </table>
+    <table name="inchoo_posts_comment">
+        <column name="id" xsi:type="int" padding="11" unsigned="true" identity="true" comment="comment id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <column name="post_id" xsi:type="int" padding="11" unsigned="true" identity="false" comment="post id"/>
+        <constraint xsi:type="foreign" referenceId="TMP" column="post_id" referenceTable="inchoo_posts" referenceColumn="post_id" onDelete="CASCADE"/>
+    </table>
+</schema>
