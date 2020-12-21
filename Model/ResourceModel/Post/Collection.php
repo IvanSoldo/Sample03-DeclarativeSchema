@@ -1,6 +1,6 @@
 <?php
 
-namespace Inchoo\DeclarativeSchema\Model\ResourceModel\Posts;
+namespace Inchoo\DeclarativeSchema\Model\ResourceModel\Post;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
@@ -12,8 +12,8 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     protected function _construct()
     {
         $this->_init(
-            \Inchoo\DeclarativeSchema\Model\Posts::class,
-            \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts::class
+            \Inchoo\DeclarativeSchema\Model\Post::class,
+            \Inchoo\DeclarativeSchema\Model\ResourceModel\Post::class
         );
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Inchoo\DeclarativeSchema\Model;
 
-class Posts extends \Magento\Framework\Model\AbstractModel
+class Post extends \Magento\Framework\Model\AbstractModel
 {
     /**
      * Initialize news Model
@@ -11,7 +11,7 @@ class Posts extends \Magento\Framework\Model\AbstractModel
      */
     protected function _construct()
     {
-        $this->_init(\Inchoo\DeclarativeSchema\Model\ResourceModel\Posts::class);
+        $this->_init(\Inchoo\DeclarativeSchema\Model\ResourceModel\Post::class);
     }
 
 }

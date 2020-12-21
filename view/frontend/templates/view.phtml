@@ -1,6 +1,10 @@
 <?php
 /**
- * @var \Inchoo\DeclarativeSchema\Block\View $block
+ * @var \Inchoo\DeclarativeSchema\Block\PostViewBlock $block
+ * @var \Inchoo\DeclarativeSchema\ViewModel\PostViewModel $viewModel
  */
+$postData = $block->getViewModel();
+$post = $postData->getPostById($block->getPostId());
 ?>
-<h1><?= $block->showNews($block->getRequest()->getParam('id'))['created_at']; ?></h1>
+
+<h1><?= $post->getContent() ?></h1>

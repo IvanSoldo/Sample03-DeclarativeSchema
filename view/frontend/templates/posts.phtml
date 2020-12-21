@@ -1,10 +1,10 @@
 <?php
 /**
- * @var \Inchoo\DeclarativeSchema\Block\Posts $block
+ * @var \Inchoo\DeclarativeSchema\Block\PostListBlock $block
  */
 ?>
 
-<?php foreach ($block->getNews() as $news): ?>
-    <h1><?= $news->getTitle() . ' ' . $news->getId(); ?></h1>
+<?php foreach ($block->getPosts() as $post): ?>
+    <h1><?= $post->getId() . ' ' . $post->getContent(); ?></h1>
 <?php endforeach; ?>
 

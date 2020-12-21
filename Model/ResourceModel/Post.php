@@ -2,7 +2,7 @@
 
 namespace Inchoo\DeclarativeSchema\Model\ResourceModel;
 
-class Posts extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**
      * Initialize news Resource

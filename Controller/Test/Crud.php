@@ -7,7 +7,7 @@ use Magento\Framework\App\Action\Context;
 class Crud extends \Magento\Framework\App\Action\Action
 {
     /**
-     * @var \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts
+     * @var \Inchoo\DeclarativeSchema\Model\ResourceModel\Post
      */
     protected $newsResource;
 
@@ -23,14 +23,14 @@ class Crud extends \Magento\Framework\App\Action\Action
     /**
      * Controller constructor.
      * @param Context $context
-     * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts $newsResource
+     * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Post $newsResource
      * @param \Inchoo\DeclarativeSchema\Model\PostsFactory $newsModelFactory
      * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Comments $commentsResource,
      * @param \Inchoo\DeclarativeSchema\Model\CommentsFactory $commentsModelFactory
      */
     public function __construct(
         Context $context,
-        \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts $newsResource,
+        \Inchoo\DeclarativeSchema\Model\ResourceModel\Post $newsResource,
         \Inchoo\DeclarativeSchema\Model\PostsFactory $newsModelFactory,
         \Inchoo\DeclarativeSchema\Model\ResourceModel\Comments $commentsResource,
         \Inchoo\DeclarativeSchema\Model\CommentsFactory $commentsModelFactory

@@ -3,6 +3,7 @@
 namespace Inchoo\DeclarativeSchema\Controller\Posts;
 
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 
 /**
@@ -14,24 +15,24 @@ use Magento\Framework\View\Result\PageFactory;
 class View extends \Magento\Framework\App\Action\Action
 {
 
-    private $resultPageFactory;
-
     /**
-     * ListAction constructor.
-     * @param \Magento\Framework\App\Action\Context $context
-     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
+     * @var PageFactory
      */
-    public function __construct(Context $context, PageFactory $resultPageFactory)
+    protected $resultPageFactory;
+    protected $postRegistry;
+
+    public function __construct(Context $context, PageFactory $resultPageFactory, Registry $postRegistry)
     {
-        $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
+        $this->resultPageFactory = $resultPageFactory;
+        $this->postRegistry = $postRegistry;
     }
 
-    /**
-     * @return \Magento\Framework\View\Result\Page
-     */
     public function execute()
     {
+        $id = $this->getRequest()->getParam('id');
+        $this->postRegistry->register('news_id', $id);
+
         return $this->resultPageFactory->create();
     }
 }

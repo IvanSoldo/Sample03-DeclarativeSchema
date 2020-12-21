@@ -6,6 +6,7 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="post_id"/>
         </constraint>
+        <column name="content" xsi:type="varchar" nullable="true" length="124" comment="content"/>
         <column name="created_at" xsi:type="datetime" default="CURRENT_TIMESTAMP"/>
         <column name="updated_at" xsi:type="datetime" default="CURRENT_TIMESTAMP" on_update="true"/>
     </table>

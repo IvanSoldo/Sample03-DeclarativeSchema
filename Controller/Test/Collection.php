@@ -16,12 +16,12 @@ class Collection extends \Magento\Framework\App\Action\Action
     /**
      * Controller constructor.
      * @param Context $context
-     * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts\CollectionFactory $newsCollectionFactory
+     * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Post\CollectionFactory $newsCollectionFactory
      * @param \Inchoo\DeclarativeSchema\Model\ResourceModel\Comments\CollectionFactory $commentsCollectionFactory
      */
     public function __construct(
         Context $context,
-        \Inchoo\DeclarativeSchema\Model\ResourceModel\Posts\CollectionFactory $newsCollectionFactory,
+        \Inchoo\DeclarativeSchema\Model\ResourceModel\Post\CollectionFactory $newsCollectionFactory,
         \Inchoo\DeclarativeSchema\Model\ResourceModel\Comments\CollectionFactory $commentsCollectionFactory
     ) {
         parent::__construct($context);
